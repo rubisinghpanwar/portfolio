@@ -2,64 +2,86 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>About | Rubi Singh Panwar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Rubi Singh Panwar</title>
+    <link rel="stylesheet" href="header.css"></link>
+    <link rel="stylesheet" href="footer.css"></link>
+    <link rel="stylesheet" href="index.css"></link>
   </head>
   <body>
     <header>
-      <img src="" alt="" />
       <nav>
-        <ul>
+        <div><a href="index.html"><img src="https://cdn-icons-png.flaticon.com/128/185/185653.png" alt=""></a></div>
+        <ul class="hideOnDesktop">
           <li><a href="about.html">About</a></li>
           <li><a href="certificates.html">Certificates</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li>
-            <a href="blogs.html"
-              >Blogs
-              <ul>
-                <li>
-                  <a href="accessibility-blogs.html"
-                    >Accessibility
-                    <ul>
-                      <li><a href="wcag-accessibility-blogs.html">WCAG</a></li>
-                      <li>
-                        <a href="laws-accessibility-blogs.html"
-                          >Accessibility Laws & Regulations</a
-                        >
-                      </li>
-                      <li>
-                        <a href="tech-accessibility-blogs.html"
-                          >Technical Aspects</a
-                        >
-                      </li>
-                    </ul>
-                  </a>
-                </li>
-                <li><a href="accessibility-blogs.html">Life</a></li>
-                <li><a href="accessibility-blogs.html"></a></li>
-              </ul>
-            </a>
+            <a href="blogs.html">Blogs</a>
+            <!-- <ul>
+              <li>
+                <a href="accessibility-blogs.html">Accessibility</a>
+                <ul>
+                  <li><a href="wcag-accessibility-blogs.html">WCAG</a></li>
+                  <li>
+                    <a href="laws-accessibility-blogs.html"
+                      >Accessibility Laws & Regulations</a
+                    >
+                  </li>
+                  <li>
+                    <a href="tech-accessibility-blogs.html"
+                      >Technical Aspects</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li><a href="accessibility-blogs.html">Life</a></li>
+            </ul> -->
           </li>
-          <li><a href="#"></a></li>
+          <li onclick=showSidebar()><a class="hideOnMobile" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+      </nav>
+      <nav class="hideOnMobile">
+        <ul class="sidebar hideOnMobile">
+          <li onclick=hideSidebar() ><a #><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li>
+            <a href="blogs.html">Blogs</a>
+            <!-- <ul>
+              <li>
+                <a href="accessibility-blogs.html">Accessibility</a>
+                <ul>
+                  <li><a href="wcag-accessibility-blogs.html">WCAG</a></li>
+                  <li>
+                    <a href="laws-accessibility-blogs.html"
+                      >Accessibility Laws & Regulations</a
+                    >
+                  </li>
+                  <li>
+                    <a href="tech-accessibility-blogs.html"
+                      >Technical Aspects</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li><a href="accessibility-blogs.html">Life</a></li>
+            </ul> -->
+          </li>
         </ul>
       </nav>
     </header>
     <main>
-      <h1 id="about">About</h1>
-      <section>
-        <h2></h2>
-      </section>
-      <section>
-        <h2></h2>
-      </section>
-      <section>
-        <h2></h2>
-      </section>
+      <h1>Rubi Singh Panwar</h1>
+      <p>I'm a web accessiblity professional located in Delhi, India.</p>
+      <img src="/Images/WhatsApp Image 2025-05-25 at 13.26.54.jpeg" alt="" />
     </main>
     <footer>
       <address></address>
       <form action="rubisinghpanwar.com" method="post">
         <fieldset>
-          <legend>Contact</legend>
+          <legend>Get in Touch!</legend>
           <label for="name">Name</label>
           <input id="name" name="name" type="text" />
           <label for="email">Email</label>
@@ -73,5 +95,18 @@
         <li><a href="acccessibility.html">Accessibility</a></li>
       </ul>
     </footer>
+    <script> 
+
+    function showSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+    } 
+
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+
+    </script>
   </body>
 </html>
